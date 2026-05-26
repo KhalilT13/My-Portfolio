@@ -12,3 +12,22 @@ links.forEach((link) => {
         navLinks.classList.remove("active");
     });
 });
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100 && elementBottom > 100) {
+            element.classList.add("active");
+        } else {
+            element.classList.remove("active");
+        }
+    });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
