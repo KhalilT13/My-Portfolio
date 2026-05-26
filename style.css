@@ -32,6 +32,39 @@ body::after {
     bottom: 120px;
     right: -130px;
 }
+
+main::before,
+main::after {
+    content: "";
+    position: fixed;
+    top: 130px;
+    bottom: 80px;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(56, 189, 248, 0.35),
+        transparent
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+main::before {
+    left: 48px;
+}
+
+main::after {
+    right: 48px;
+}
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+
 header{
     background-color: #111827;
     padding: 20px;
@@ -39,14 +72,15 @@ header{
     top: 0;
     z-index: 1000;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
-nav div {
+nav-links{
     display: flex;
     gap: 24px;
+    justify-self: center;
 }
 nav a {
     color: white;
@@ -55,6 +89,53 @@ nav a {
 }
 nav a:hover{
     color: #38bdf8;
+}
+
+.logo {
+    justify-self: start;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    transform: rotate(-4deg) scale(1.05);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.45);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    justify-self: center;
+}
+
+.nav-resume {
+    justify-self: end;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-resume:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-2px);
 }
 .logo{
     font-size: 24px;
