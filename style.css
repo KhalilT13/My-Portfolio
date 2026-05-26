@@ -190,6 +190,14 @@ section h2::after{
     transform: translateY(-4px);
     border-color: #38bdf8;
 }
+.menu-button{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
 @media(max-width: 768px){
     nav{
         flex-direction: column;
@@ -219,6 +227,19 @@ section h2::after{
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    .menu-button{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 16px;
+    }
+    .nav-links.active{
+        display: flex;
     }
 }
 
