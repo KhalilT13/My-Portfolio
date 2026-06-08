@@ -70,7 +70,7 @@ Links to contact me through email, GitHub, and LinkedIn.
 You can view the live portfolio here:
 
 ```text
-https://your-github-username.github.io/your-repository-name/
+https://khalilt13.github.io/My-Portfolio/
 ```
 
 ## How to Run Locally
@@ -78,13 +78,13 @@ https://your-github-username.github.io/your-repository-name/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-github-username/your-repository-name.git
+git clone https://github.com/KhalilT13/My-Portfolio.git
 ```
 
 2. Open the project folder:
 
 ```bash
-cd your-repository-name
+cd My-Portfolio
 ```
 
 3. Open `index.html` in your browser.
